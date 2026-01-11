@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$JOE - The Emoti Guy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="xp-login" id="login">
+        <div class="login-bg">
+            <div class="login-header">
+                <img src="windows_xp_logo.svg" alt="Windows XP" class="windows-logo-svg">
+                <span class="header-text">To begin, click your user name</span>
+            </div>
+            <div class="login-panel">
+                <img src="emoji_hammer.svg" alt="Profile Picture" class="user-icon-img">
+                <div class="username-display">Dark_Whisper749</div>
+                <div class="login-form">
+                    <div class="input-group">
+                        <label>Type your user name:</label>
+                        <input type="text" id="username" readonly value="">
+                    </div>
+                    <div class="input-group">
+                        <label>Type your password:</label>
+                        <input type="password" id="password" readonly value="">
+                    </div>
+                    <button class="login-btn" id="loginBtn">
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="minimized-icon" id="minimizedIcon" onclick="restoreWindow()">
+        <img src="ie_logo.svg" alt="IE" class="taskbar-item-icon-img">
+        <span class="minimized-icon-text">$JOE - Internet Explorer</span>
+    </div>
+
+    <div class="desktop" id="desktop" style="display: none;">
+        <!-- Desktop Icon -->
+        <div class="desktop-icon" onclick="spawnMultiplePopups()">
+            <img src="desktop_icon.svg" alt="Icon" class="desktop-icon-img">
+            <span class="desktop-icon-label">BonziBuddy</span>
+        </div>
+        
+        <div class="taskbar">
+            <div class="start-btn">
+                <span class="start-icon">
+                    <img src="windows_xp_logo.svg" alt="Start">
+                </span>
+                <span>start</span>
+            </div>
+            <div class="quick-launch">
+                <div class="quick-launch-icon" title="Internet Explorer">
+                    <img src="ie_logo.svg" alt="IE" class="quick-launch-ie-icon">
+                </div>
+                <div class="quick-launch-icon" title="Notepad" onclick="openNotepad()">
+                    <img src="notepad_logo.svg" alt="Notepad" class="quick-launch-ie-icon">
+                </div>
+                <div class="quick-launch-separator"></div>
+            </div>
+            <div class="taskbar-items">
+                <div class="taskbar-item active">
+                    <img src="ie_logo.svg" alt="IE" class="taskbar-item-icon-img">
+                    <span>$JOE - Internet Explorer</span>
+                </div>
+                <div class="taskbar-item" id="notepadTaskbarItem" style="display: none;" onclick="restoreNotepad()">
+                    <img src="notepad_logo.svg" alt="Notepad" class="taskbar-item-icon-img">
+                    <span>Untitled - Notepad</span>
+                </div>
+            </div>
+            <div class="system-tray">
+                <span class="clock" id="clock">12:00 PM</span>
+            </div>
+        </div>
+
+        <main class="window">
+            <div class="window-header">
+                <div class="window-title">
+                    <img src="ie_logo.svg" alt="IE" class="window-title-icon">
+                    <span>$JOE - The Emoti Guy - Internet Explorer</span>
+                </div>
+                <div class="window-controls">
+                    <button class="win-btn minimize" onclick="minimizeWindow()">_</button>
+                    <button class="win-btn maximize" onclick="toggleFullscreen()">□</button>
+                    <button class="win-btn close" onclick="showErrorPopup()">✕</button>
+                </div>
+            </div>
+
+            <div class="menu-bar">
+                <span class="menu-item">File</span>
+                <span class="menu-item">Edit</span>
+                <span class="menu-item">View</span>
+                <span class="menu-item">Favorites</span>
+                <span class="menu-item">Tools</span>
+                <span class="menu-item">Help</span>
+            </div>
+
+            <div class="toolbar">
+                <button class="toolbar-btn">◀ Back</button>
+                <button class="toolbar-btn">▶ Forward</button>
+                <button class="toolbar-btn">⟳ Refresh</button>
+                <button class="toolbar-btn">⌂ Home</button>
+                <div class="address-bar">
+                    <span class="address-label">Address</span>
+                    <input type="text" value="http://www.joe-token.sol" readonly>
+                    <button class="go-btn">Go</button>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <section class="hero-section">
+                    <img src="joe-hero.svg" alt="Joe" class="hero-logo">
+                    <div class="hero-box">
+                        <div class="info-panel">
+                            <div class="panel-header">Built on Solana</div>
+                            <h1 class="title">$JOE</h1>
+                            <h2 class="subtitle">The Emoti Guy</h2>
+                            <p class="description">The one who stays calm when everyone else panics. Hold with confidence.</p>
+                            <div class="button-group">
+                                <button class="xp-button primary">Buy $JOE</button>
+                                <button class="xp-button">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-panel">
+                        <div class="stat-box">
+                            <div class="stat-value">$4.2M</div>
+                            <div class="stat-label">Market Cap</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">69K+</div>
+                            <div class="stat-label">Holders</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">0%</div>
+                            <div class="stat-label">Tax</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <div class="panel">
+                        <div class="panel-header-bar">
+                            <span>About</span>
+                        </div>
+                        <div class="panel-content">
+                            <h3>Who is Joe?</h3>
+                            <p class="lead">Joe is the calm in the chaos. When markets crash and panic spreads, Joe stays composed.</p>
+                            <p>This isn't just a token—it's a mindset. Joe represents patience over panic, holding over folding. In a space filled with noise, Joe is the signal.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <div class="section-title">
+                        <span>Tokenomics - Distribution</span>
+                    </div>
+                    <div class="token-grid">
+                        <div class="token-panel">
+                            <div class="token-header">Liquidity</div>
+                            <div class="token-percent">69%</div>
+                            <div class="token-desc">Locked and secured</div>
+                        </div>
+                        <div class="token-panel">
+                            <div class="token-header">Community</div>
+                            <div class="token-percent">20%</div>
+                            <div class="token-desc">Treasury for growth</div>
+                        </div>
+                        <div class="token-panel">
+                            <div class="token-header">Marketing</div>
+                            <div class="token-percent">10%</div>
+                            <div class="token-desc">Spreading the word</div>
+                        </div>
+                        <div class="token-panel">
+                            <div class="token-header">Team</div>
+                            <div class="token-percent">1%</div>
+                            <div class="token-desc">Aligned with holders</div>
+                        </div>
+                    </div>
+                    <div class="features-bar">
+                        <div class="feature-badge">0% Tax</div>
+                        <div class="feature-badge">LP Locked</div>
+                        <div class="feature-badge">Contract Renounced</div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <div class="section-title">
+                        <span>How to Buy - Get $JOE in 4 Steps</span>
+                    </div>
+                    <div class="steps-grid">
+                        <div class="step-panel">
+                            <div class="step-number">Step 1</div>
+                            <h4>Get a Wallet</h4>
+                            <p>Download Phantom or Solflare wallet and set it up securely.</p>
+                        </div>
+                        <div class="step-panel">
+                            <div class="step-number">Step 2</div>
+                            <h4>Get SOL</h4>
+                            <p>Buy Solana from an exchange and transfer it to your wallet.</p>
+                        </div>
+                        <div class="step-panel">
+                            <div class="step-number">Step 3</div>
+                            <h4>Swap</h4>
+                            <p>Go to Jupiter or Raydium, connect your wallet, paste the contract address.</p>
+                        </div>
+                        <div class="step-panel">
+                            <div class="step-number">Step 4</div>
+                            <h4>Hold</h4>
+                            <p>You're in. Now stay calm and hold like Joe.</p>
+                        </div>
+                    </div>
+                    <div class="contract-section">
+                        <div class="panel">
+                            <div class="panel-header-bar">Contract Address</div>
+                            <div class="panel-content contract-panel">
+                                <input type="text" value="Coming Soon" id="contract" readonly>
+                                <button class="xp-button" onclick="copyContract()">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <div class="section-title">
+                        <span>Community - Join Us</span>
+                    </div>
+                    <div class="links-grid">
+                        <a href="#" class="link-panel">
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="link-panel">
+                            <span>Telegram</span>
+                        </a>
+                        <a href="#" class="link-panel">
+                            <span>Discord</span>
+                        </a>
+                        <a href="#" class="link-panel">
+                            <span>DexTools</span>
+                        </a>
+                    </div>
+                </section>
+
+                <footer class="footer-section">
+                    <div class="panel">
+                        <div class="panel-content">
+                            <div class="footer-brand">
+                                <strong>$JOE</strong> - The Emoti Guy
+                            </div>
+                            <p class="disclaimer">$JOE is a meme token with no intrinsic value. Do your own research. Not financial advice. Only invest what you can afford to lose.</p>
+                            <div class="footer-copy">© 2026 $JOE</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-item">Done</div>
+                <div class="status-item">Internet</div>
+            </div>
+        </main>
+
+        <!-- Notepad Window -->
+        <div class="notepad-window" id="notepadWindow" style="display: none;">
+            <div class="window-header notepad-header">
+                <div class="window-title">
+                    <img src="notepad_logo.svg" alt="Notepad" class="window-title-icon">
+                    <span>Untitled - Notepad</span>
+                </div>
+                <div class="window-controls">
+                    <button class="win-btn minimize" onclick="minimizeNotepad()">_</button>
+                    <button class="win-btn maximize" onclick="toggleNotepadFullscreen()">□</button>
+                    <button class="win-btn close" onclick="closeNotepad()">✕</button>
+                </div>
+            </div>
+
+            <div class="notepad-menu-bar">
+                <span class="menu-item">File</span>
+                <span class="menu-item">Edit</span>
+                <span class="menu-item">Format</span>
+                <span class="menu-item">View</span>
+                <span class="menu-item">Help</span>
+            </div>
+
+            <div class="notepad-content">
+                <textarea id="notepadText" class="notepad-textarea" placeholder=""></textarea>
+            </div>
+        </div>
+
+        <!-- Minimized Notepad Icon -->
+        <div class="minimized-icon" id="minimizedNotepad" onclick="restoreNotepad()">
+            <img src="notepad_logo.svg" alt="Notepad" class="taskbar-item-icon-img">
+            <span class="minimized-icon-text">Untitled - Notepad</span>
+        </div>
+    </div>
+
+    <script>
+        // Show login immediately on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('login').style.display = 'flex';
+            startLoginAnimation();
+        });
+
+        // Login Animation
+        function startLoginAnimation() {
+            const username = 'Dark_Whisper749';
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const loginBtn = document.getElementById('loginBtn');
+            
+            let i = 0;
+            const typeUsername = setInterval(() => {
+                if (i < username.length) {
+                    usernameInput.value += username.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typeUsername);
+                    setTimeout(typePassword, 200);
+                }
+            }, 60);
+            
+            function typePassword() {
+                let j = 0;
+                const passwordLength = 8;
+                const typePass = setInterval(() => {
+                    if (j < passwordLength) {
+                        passwordInput.value += '*';
+                        j++;
+                    } else {
+                        clearInterval(typePass);
+                        setTimeout(() => {
+                            loginBtn.style.background = 'linear-gradient(to bottom, #7ec67e 0%, #5eab5e 100%)';
+                            setTimeout(performLogin, 400);
+                        }, 200);
+                    }
+                }, 80);
+            }
+        }
+
+        function performLogin() {
+            document.getElementById('login').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('desktop').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('desktop').style.opacity = '1';
+                }, 50);
+            }, 500);
+        }
+
+        function copyContract() {
+            const contract = document.getElementById('contract').value;
+            navigator.clipboard.writeText(contract);
+            alert('Contract address copied to clipboard!');
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+            document.getElementById('clock').textContent = time;
+        }
+        
+        updateClock();
+        setInterval(updateClock, 60000);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+            });
+        });
+
+        // Window error sound
+        function playErrorSound() {
+            const audio = new Audio('windows_error.mp3');
+            audio.volume = 0.5;
+            audio.play().catch(() => {
+                // Fallback if audio file doesn't exist
+                console.log('Audio file not found');
+            });
+        }
+
+        // Fullscreen functionality
+        function toggleFullscreen() {
+            const mainWindow = document.querySelector('.window');
+            if (mainWindow.classList.contains('fullscreen')) {
+                mainWindow.classList.remove('fullscreen');
+            } else {
+                mainWindow.classList.add('fullscreen');
+            }
+        }
+
+        // Minimize functionality
+        function minimizeWindow() {
+            const mainWindow = document.querySelector('.window');
+            const minimizedIcon = document.getElementById('minimizedIcon');
+            
+            // Add minimizing animation class
+            mainWindow.classList.add('minimizing');
+            
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+                mainWindow.classList.add('minimized');
+                mainWindow.classList.remove('minimizing');
+                minimizedIcon.classList.add('show');
+            }, 400);
+        }
+
+        // Restore window from minimized state
+        function restoreWindow() {
+            const mainWindow = document.querySelector('.window');
+            const minimizedIcon = document.getElementById('minimizedIcon');
+            
+            // Hide minimized icon first
+            minimizedIcon.classList.remove('show');
+            
+            // Show window with restore animation
+            mainWindow.classList.remove('minimized');
+            mainWindow.classList.add('restoring');
+            
+            // Remove restoring class after animation
+            setTimeout(() => {
+                mainWindow.classList.remove('restoring');
+            }, 400);
+        }
+
+        // Make window draggable (same mechanics as Notepad)
+        function makeMainWindowDraggable() {
+            const mainWindow = document.querySelector('.window');
+            const windowHeader = document.querySelector('.window-header');
+            let isDragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            windowHeader.addEventListener('mousedown', function(e) {
+                if (e.target.closest('.window-controls')) return;
+                
+                const rect = mainWindow.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+                isDragging = true;
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                if (!isDragging) return;
+                
+                e.preventDefault();
+                
+                let newX = e.clientX - offsetX;
+                let newY = e.clientY - offsetY;
+
+                const rect = mainWindow.getBoundingClientRect();
+                const maxX = window.innerWidth - rect.width;
+                const maxY = window.innerHeight - rect.height - 30;
+                
+                if (newX < 0) newX = 0;
+                if (newX > maxX) newX = maxX;
+                if (newY < 0) newY = 0;
+                if (newY > maxY) newY = maxY;
+
+                mainWindow.style.left = newX + 'px';
+                mainWindow.style.top = newY + 'px';
+                mainWindow.style.transform = 'none';
+            });
+
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+            });
+        }
+
+        // Initialize dragging
+        makeMainWindowDraggable();
+
+        // Counter for unique popup IDs
+        let popupCounter = 0;
+
+        // Show error popup at random position
+        function showErrorPopup() {
+            playErrorSound();
+            
+            // Create new popup element
+            const popup = document.createElement('div');
+            popup.className = 'error-popup';
+            popup.id = 'errorPopup' + popupCounter;
+            
+            // Random position (with padding from edges)
+            const maxX = window.innerWidth - 450;
+            const maxY = window.innerHeight - 250;
+            const randomX = Math.max(50, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(50, Math.floor(Math.random() * maxY));
+            
+            popup.style.left = randomX + 'px';
+            popup.style.top = randomY + 'px';
+            
+            // Set z-index to stack them properly
+            popup.style.zIndex = 10000 + popupCounter;
+            
+            // Build popup content
+            popup.innerHTML = `
+                <div class="error-popup-header">
+                    Error
+                </div>
+                <div class="error-popup-content">
+                    <div class="error-popup-icon">
+                        <img src="angry_emoji.svg" alt="Error">
+                    </div>
+                    <div class="error-popup-message">
+                        Don't you dare!
+                    </div>
+                </div>
+                <button class="error-popup-button" onclick="closeErrorPopup('${popup.id}')">OK</button>
+            `;
+            
+            // Add to body
+            document.body.appendChild(popup);
+            
+            // Make it draggable
+            makeDraggable(popup);
+            
+            popupCounter++;
+        }
+
+        // Close specific error popup
+        function closeErrorPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.remove();
+            }
+        }
+
+        // Spawn multiple error popups at once
+        function spawnMultiplePopups() {
+            const numberOfPopups = 15; // Spawn 15 popups at once
+            const popupIds = [];
+            
+            // Create all popups at once
+            for (let i = 0; i < numberOfPopups; i++) {
+                setTimeout(() => {
+                    showErrorPopup();
+                    // Store the current popup ID
+                    popupIds.push('errorPopup' + (popupCounter - 1));
+                }, i * 50); // Slight delay between spawns for effect
+            }
+            
+            // After 4 seconds, start slowly closing them
+            setTimeout(() => {
+                // Get all error popups on screen
+                const allPopups = document.querySelectorAll('.error-popup');
+                
+                // Close them one by one with delays
+                allPopups.forEach((popup, index) => {
+                    setTimeout(() => {
+                        if (popup && popup.parentNode) {
+                            popup.style.transition = 'opacity 0.5s, transform 0.5s';
+                            popup.style.opacity = '0';
+                            popup.style.transform = 'scale(0.8)';
+                            
+                            setTimeout(() => {
+                                popup.remove();
+                            }, 500);
+                        }
+                    }, index * 200); // Stagger the closing
+                });
+            }, 4000);
+        }
+
+        // Make popup draggable
+        function makeDraggable(element) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            const header = element.querySelector('.error-popup-header');
+            
+            if (header) {
+                header.onmousedown = dragMouseDown;
+            }
+            
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+            
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                element.style.top = (element.offsetTop - pos2) + "px";
+                element.style.left = (element.offsetLeft - pos1) + "px";
+            }
+            
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        // Notepad Functions
+        let notepadIsFullscreen = false;
+
+        function openNotepad() {
+            const notepad = document.getElementById('notepadWindow');
+            const taskbarItem = document.getElementById('notepadTaskbarItem');
+            
+            notepad.style.display = 'flex';
+            taskbarItem.style.display = 'flex';
+            taskbarItem.classList.add('active');
+            
+            // Center the notepad window
+            notepad.style.left = '50%';
+            notepad.style.top = '50%';
+            notepad.style.transform = 'translate(-50%, -50%)';
+            
+            // Make notepad draggable
+            makeNotepadDraggable();
+        }
+
+        function closeNotepad() {
+            const notepad = document.getElementById('notepadWindow');
+            const taskbarItem = document.getElementById('notepadTaskbarItem');
+            const minimized = document.getElementById('minimizedNotepad');
+            
+            notepad.style.display = 'none';
+            taskbarItem.style.display = 'none';
+            minimized.classList.remove('show');
+            
+            // Clear notepad content if desired
+            // document.getElementById('notepadText').value = '';
+        }
+
+        function minimizeNotepad() {
+            const notepad = document.getElementById('notepadWindow');
+            const minimized = document.getElementById('minimizedNotepad');
+            const taskbarItem = document.getElementById('notepadTaskbarItem');
+            
+            notepad.classList.add('minimizing');
+            taskbarItem.classList.remove('active');
+            
+            setTimeout(() => {
+                notepad.style.display = 'none';
+                notepad.classList.remove('minimizing');
+                minimized.classList.add('show');
+            }, 300);
+        }
+
+        function restoreNotepad() {
+            const notepad = document.getElementById('notepadWindow');
+            const minimized = document.getElementById('minimizedNotepad');
+            const taskbarItem = document.getElementById('notepadTaskbarItem');
+            
+            minimized.classList.remove('show');
+            notepad.style.display = 'flex';
+            notepad.classList.add('restoring');
+            taskbarItem.classList.add('active');
+            
+            setTimeout(() => {
+                notepad.classList.remove('restoring');
+            }, 300);
+        }
+
+        function toggleNotepadFullscreen() {
+            const notepad = document.getElementById('notepadWindow');
+            
+            if (!notepadIsFullscreen) {
+                notepad.style.width = '100%';
+                notepad.style.height = 'calc(100% - 30px)';
+                notepad.style.left = '0';
+                notepad.style.top = '0';
+                notepad.style.transform = 'none';
+                notepadIsFullscreen = true;
+            } else {
+                notepad.style.width = '600px';
+                notepad.style.height = '500px';
+                notepad.style.left = '50%';
+                notepad.style.top = '50%';
+                notepad.style.transform = 'translate(-50%, -50%)';
+                notepadIsFullscreen = false;
+            }
+        }
+
+        function makeNotepadDraggable() {
+            const notepad = document.getElementById('notepadWindow');
+            const header = notepad.querySelector('.notepad-header');
+            let isDragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            header.addEventListener('mousedown', function(e) {
+                if (e.target.closest('.window-controls')) return;
+                
+                const rect = notepad.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+                isDragging = true;
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                if (!isDragging || notepadIsFullscreen) return;
+                
+                e.preventDefault();
+                
+                let newX = e.clientX - offsetX;
+                let newY = e.clientY - offsetY;
+
+                const rect = notepad.getBoundingClientRect();
+                const maxX = window.innerWidth - rect.width;
+                const maxY = window.innerHeight - rect.height - 30;
+                
+                if (newX < 0) newX = 0;
+                if (newX > maxX) newX = maxX;
+                if (newY < 0) newY = 0;
+                if (newY > maxY) newY = maxY;
+
+                notepad.style.left = newX + 'px';
+                notepad.style.top = newY + 'px';
+                notepad.style.transform = 'none';
+            });
+
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+            });
+        }
+    </script>
+</body>
+</html>
