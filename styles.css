@@ -1499,3 +1499,266 @@ body {
     word-wrap: break-word;
     max-width: 80px;
 }
+
+/* ==========================================
+   MOBILE RESPONSIVE STYLES
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    /* Login Screen Mobile */
+    .login-bg {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .windows-logo-svg {
+        width: 120px !important;
+        height: auto;
+    }
+    
+    .user-icon-img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .username-display {
+        font-size: 16px !important;
+    }
+    
+    /* Desktop/Window Mobile */
+    .window {
+        width: 95vw !important;
+        max-width: 95vw;
+        left: 2.5vw !important;
+        top: 10px !important;
+        transform: none !important;
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+    
+    .window-header {
+        cursor: default;
+        padding: 8px;
+    }
+    
+    .window-title {
+        font-size: 10px;
+    }
+    
+    .window-title-icon {
+        width: 14px;
+        height: 14px;
+    }
+    
+    /* Disable dragging on mobile */
+    .window-header {
+        cursor: default !important;
+    }
+    
+    /* Hero Section Mobile */
+    .hero-section {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    
+    .hero-box {
+        width: 100%;
+    }
+    
+    .title {
+        font-size: 48px !important;
+    }
+    
+    .subtitle {
+        font-size: 24px !important;
+    }
+    
+    .description {
+        font-size: 14px !important;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .xp-button {
+        width: 100%;
+        font-size: 13px !important;
+        padding: 10px 20px;
+    }
+    
+    /* Panel Content Mobile */
+    .panel {
+        margin: 10px 5px;
+    }
+    
+    .panel-content {
+        padding: 15px;
+        font-size: 13px !important;
+    }
+    
+    .panel-content h3 {
+        font-size: 16px !important;
+    }
+    
+    .panel-content p {
+        font-size: 13px !important;
+        line-height: 1.6;
+    }
+    
+    /* How to Buy Steps Mobile */
+    .steps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+    
+    .step-panel {
+        min-height: auto;
+    }
+    
+    /* Links Grid Mobile */
+    .links-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+    
+    /* Contract Panel Mobile */
+    .contract-panel {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contract-panel input {
+        width: 100%;
+    }
+    
+    .contract-panel button {
+        width: 100%;
+    }
+    
+    /* Taskbar Mobile */
+    .taskbar {
+        padding: 2px 5px;
+        height: 40px;
+    }
+    
+    .start-btn {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+    
+    .start-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .quick-launch {
+        gap: 5px;
+    }
+    
+    .quick-launch-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .taskbar-items {
+        display: none; /* Hide on mobile to save space */
+    }
+    
+    .clock {
+        font-size: 10px;
+    }
+    
+    /* Notepad Window Mobile */
+    .notepad-window {
+        width: 95vw !important;
+        height: 70vh !important;
+        left: 2.5vw !important;
+        top: 15vh !important;
+        transform: none !important;
+    }
+    
+    .notepad-textarea {
+        font-size: 12px;
+    }
+    
+    /* Desktop Icon Mobile */
+    .desktop-icon {
+        width: 70px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .desktop-icon-img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .desktop-icon-label {
+        font-size: 10px;
+    }
+    
+    /* Minimized Icons Mobile */
+    .minimized-icon {
+        display: none !important; /* Hide minimized icons on mobile */
+    }
+    
+    /* Error Popup Mobile */
+    .error-popup {
+        width: 90vw !important;
+        max-width: 350px;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    
+    /* Footer Mobile */
+    .footer-section {
+        padding: 20px 10px;
+    }
+    
+    .footer-brand {
+        font-size: 14px !important;
+    }
+    
+    .disclaimer {
+        font-size: 11px !important;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 36px !important;
+    }
+    
+    .subtitle {
+        font-size: 20px !important;
+    }
+    
+    .description {
+        font-size: 12px !important;
+    }
+    
+    .xp-button {
+        font-size: 12px !important;
+        padding: 8px 16px;
+    }
+    
+    .window {
+        border-radius: 0;
+        height: 100vh;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+    }
+    
+    .panel-content {
+        font-size: 12px !important;
+    }
+    
+    .panel-content h3 {
+        font-size: 14px !important;
+    }
+}
